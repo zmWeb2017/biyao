@@ -193,11 +193,60 @@
     .secondaryMenu-show li p{
         margin-left: 30px;
     }
-    /*隐藏的div*/
+   /*erjicaidan*/
+ /*隐藏的div*/
    .concealBox{
        width:700px;
-       min-height:360px;
+       min-height: 360px;
        position:absolute;
        left:200px;
+       top:0px;
        background: white;
+       z-index: 999;
+       display: none;
+        font-size: 14px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        opacity: 1;
    }
+  .concealBox-hover{
+    z-index: 1000;
+  }
+ .concealBox-lis-box{
+        display:flex;
+        height:50px;
+        line-height: 50px;
+ }
+
+ .concealBox-man01{
+        margin-left:14px;
+ }
+ .concealBox-man01-box{
+    display: block;
+    text-align: center;
+      width: 110px;
+      margin-left:14px;
+ }
+ .concealBox-man01-span{
+    margin-left:12px;
+    margin-right:14px;
+ }
+ .marginRinghtA{
+    margin-right:18px;
+ }
+ .concealBox-man01-p{
+        margin-right:0px;
+        width: 590px;
+        height:50px;
+        border-bottom: 1px solid #f2f2f2;
+ }
+ //必要说
+ #biyaoshuo-box{
+    width: 1080px;
+    margin:0 auto;
+    background: white;
+    height: 55px;
+    position: relative;
+    top: -360px;
+    left: 0;
+ }

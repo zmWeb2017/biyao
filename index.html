@@ -140,8 +140,9 @@
 			</ul>
 		</div>
 		<!--男装/女装-->
-		<div class="concealBox">
-			<!--<div class="concealBox-lis-box">
+		<!--<div class="concealBox">
+			<div class="concealBox-lis-box">
+			<div></div>
 				<a class="concealBox-man01">男士外套</a>
 				<span class="concealBox-man01-span">></span>
 				<p class="concealBox-man01-p">
@@ -157,7 +158,10 @@
 					<span>/</span>
 					<a>大衣</a>
 				</p>
-			</div>-->
+			</div>
+			
+		</div>-->
+		<div id="biyaoshuo-box">
 			
 		</div>
     </div>
@@ -169,44 +173,42 @@
 $(function(){
 	
 	//动态创建dom
-	let manAadGirl='<div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let glassesACC='<div class="concealBox-lis-box"><a class="concealBox-man01">眼镜</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let shoes='<div class="concealBox-lis-box"><a class="concealBox-man01">鞋子</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let leatherware='<div class="concealBox-lis-box"><a class="concealBox-man01">皮具</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let livingAtHome='<div class="concealBox-lis-box"><a class="concealBox-man01">家纺</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let makeUp='<div class="concealBox-lis-box"><a class="concealBox-man01">化妆品</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let kitchen='<div class="concealBox-lis-box"><a class="concealBox-man01">家电</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
-	let car='<div class="concealBox-lis-box"><a class="concealBox-man01">路虎</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let manAadGirl='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a>羽绒</a><span>/</span><a class="marginRinghtA">棉服</a><a>皮衣</a><span>/</span><a class="marginRinghtA">夹克</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士上装</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">衬衫</a><a class="marginRinghtA">针织衫</a><a>羊绒</a><span>/</span><a class="marginRinghtA">毛衣</a><a class="marginRinghtA">卫衣</a><a>西装</a><span>/</span><a class="marginRinghtA">套装</a><a class="marginRinghtA">POLO衫</a><a class="marginRinghtA">男T恤</a><a>马甲</a><span>/</span><a class="marginRinghtA">背心</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士下装</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">牛仔裤</a><a class="marginRinghtA">休闲裤</a><a class="marginRinghtA">西裤</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">女士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">外套</a><a>针织</a><span>/</span><a>羊毛</a><span>/</span><a class="marginRinghtA">羊绒衫</a><a>衬衫</a><span>/</span><a class="marginRinghtA">雪纺</a><a class="marginRinghtA">卫衣</a><a>T恤</a><span>/</span><a class="marginRinghtA">polo</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">女士下装</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">牛仔裤</a><a class="marginRinghtA">休闲裤</a><a class="marginRinghtA">短裤</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女裙</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">连衣裙</a><a class="marginRinghtA">半身裙</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">特色女装</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>婚纱</a><span>/</span><a class="marginRinghtA">礼服</a></p></div></div>';
+	let glassesACC='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;眼镜</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">眼镜</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内衣</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>文胸</a><span>/</span><a class="marginRinghtA">套装</a><a class="marginRinghtA">女士内裤</a><a class="marginRinghtA">男士内裤</a><a class="marginRinghtA">秋衣秋裤</a><a>睡衣</a><span>/</span><a class="marginRinghtA">家居服</a><a class="marginRinghtA">功能内衣</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;袜子</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">袜子</a><a>连裤袜</a><span>/</span><a class="marginRinghtA">丝袜</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配饰</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a class="marginRinghtA">丝巾围巾</a><a>手套</a><span>/</span><a class="marginRinghtA">帽子</a><a class="marginRinghtA">领带</a><a>遮阳</a><span>/</span><a class="marginRinghtA">雨伞</a><a>腰带</a><span>/</span><a class="marginRinghtA">礼盒</a></p></div></div>';
+	let shoes='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">鞋子</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div><div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div><div>';
+	let leatherware='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">皮具</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div></div>';
+	let livingAtHome='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">家纺</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div></div>';
+	let makeUp='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">化妆品</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div></div>';
+	let kitchen='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">家电</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div></div>';
+	let car='<div class="concealBox"><div class="concealBox-lis-box"><a class="concealBox-man01">路虎</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div></div>';
 	let Arr=[manAadGirl,glassesACC,shoes,leatherware,livingAtHome,makeUp,kitchen,car]
-	
-	
+	let ord=0;
+	for(let j=0;j<8;j++){
+		$(".secondaryMenu").append(Arr[j])
+	}
 	let $lis=$(".secondaryMenu-show li");
 	for(let i=0;i<$lis.length;i++){
-		$($(".concealBox")).innerHTML="";
 		$lis.eq(i).mouseover(function(){
-			for(var k=0;k<$lis.length;k++){
-				$(".concealBox").css("display","none");
-			}
 			$(".concealBox").css("display","block");
-			for(let j=0;j<7;j++){
-				$(".concealBox").append(Arr[i])
-				
-			}
-			$($(".concealBox")).innerHTML=" ";
+			$(".concealBox").eq(i).addClass('concealBox-hover')
+			//$(".concealBox").eq(i).css("opacity","1")
+			ord=i;
 		})
-//		$lis.eq(i).mouseout(function(){
-//			$(".concealBox").css("display","none");
-//			//$($(".concealBox")).innerHTML="";
-//		})
-		
-		
-	}
+		$lis.eq(i).mouseout(function(){
+			$(".concealBox").css("display","none");
+			$(".concealBox").eq(i).removeClass('concealBox-hover')
+		})
+	
 	$(".concealBox").mouseover(function(){
 		$(".concealBox").css("display","block");
+		$(".concealBox").eq(ord).addClass('concealBox-hover')
 	})
 	$(".concealBox").mouseout(function(){
 		$(".concealBox").css("display","none");
 	})
+	//erjicaidang over
+	}
+	//
 })
 
 
@@ -221,20 +223,20 @@ $(function(){
 
 
 //轮播图
-var mySwiper = new Swiper ('.swiper-container', {
-    autoplay: 2000,
-    loop: true,
-    autoplayDisableOnInteraction :false,
-    //effect : 'cube',
-    effect : 'coverflow',
-    paginationClickable: true,
-    // 如果需要分页器
-    pagination: '.swiper-pagination',
-    
-    // 如果需要前进后退按钮
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    
-   
-  })        
+//var mySwiper = new Swiper ('.swiper-container', {
+//  autoplay: 2000,
+//  loop: true,
+//  autoplayDisableOnInteraction :false,
+//  effect : 'fade',
+//  //effect : 'coverflow',
+//  paginationClickable: true,
+//  // 如果需要分页器
+//  pagination: '.swiper-pagination',
+//  
+//  // 如果需要前进后退按钮
+//  nextButton: '.swiper-button-next',
+//  prevButton: '.swiper-button-prev',
+//  
+// 
+//})        
 </script>
