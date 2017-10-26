@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
+<link rel="stylesheet" href="css/iconfont.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<!--
+    	作者：1434359244@qq.com
+    	时间：2017-10-24
+    	描述：导航栏。
+    -->
+	<div id="index-nav-box">
+		<div id="index-nav">
+			<div id="index-nav-left">
+				<a href="#">首页</a>
+				<span class="leftSpan">|</span>
+				<a href="#">平台政策</a>
+				<span class="leftSpan">|</span>
+				<a href="#">商家入驻</a>
+			</div>
+			<div id="index-nav-right">
+				<a href="#" id="gouwuche"><i class="iconfont icon-gouwuche"></i>购物车<span class="num">0</span></a>
+				<a href="#"><img src="img/youXiang.png"/>消息中心<span class="num">0</span></a>
+				<span class="rightSpan">|</span>
+				<a href="#">下载必需APP</a>
+				<span class="rightSpan">|</span>
+				<a href="#">注册</a>
+				<a href="#">登录</a>
+			</div>
+		</div>
+	</div>
+	<!--
+    	作者：1434359244@qq.com
+    	时间：2017-10-24
+    	描述：搜索栏。
+    -->
+    <div class="index-Search-box">
+    	<div class="index-Search">
+    		<img src="img/logo.png" />
+	    	<span class="SearchBtn"><i class="iconfont icon-search"></i></span>
+	    	<p><input type="text" placeholder="请输入要搜索的商品" /></p>
+    	</div>
+    </div>
+    <!--
+    	作者：1434359244@qq.com
+    	时间：2017-10-25
+    	描述：二级菜单和轮播图
+    -->
+    <div class="index-result-box">
+    	
+    	<!--轮播图-->
+    	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="img/Slide0.jpg" alt=""></div>
+	        <div class="swiper-slide"><img src="img/Slide1.jpg" alt=""></div>
+	        <div class="swiper-slide"><img src="img/Slide2.jpg" alt=""></div>
+	        <div class="swiper-slide"><img src="img/Slide3.jpg" alt=""></div>
+	        <div class="swiper-slide"><img src="img/Slide4.jpg" alt=""></div>
+	        <div class="swiper-slide"><img src="img/Slide5.jpg" alt=""></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- 如果需要导航按钮 -->
+	    <div class="swiper-button-prev"><</div>
+	    <div class="swiper-button-next">></div>
+		</div>
+		
+		<!--erjicaidan-->
+		<div class="secondaryMenu">
+			<ul class="secondaryMenu-show">
+				<li>
+					<p>
+						<a>男装</a>
+						<span>/</span>
+						<a>女装</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>眼镜</a>
+						<span>/</span>
+						<a>配饰</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>鞋靴</a>
+						<span>/</span>
+						<a>运动</a>
+					</p>
+					
+				</li>
+				<li>
+					<p>
+						<a>皮具</a>
+						<span>/</span>
+						<a>出行</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>居家</a>
+						<span>/</span>
+						<a>婴童</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>美妆</a>
+						<span>/</span>
+						<a>个护</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>厨具</a>
+						<span>/</span>
+						<a>家电</a>
+						<span>/</span>
+						<a>数码</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<a>家装</a>
+						<span>/</span>
+						<a>家具</a>
+						<span>/</span>
+						<a>汽配</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<!--男装/女装-->
+		<div class="concealBox">
+			<!--<div class="concealBox-lis-box">
+				<a class="concealBox-man01">男士外套</a>
+				<span class="concealBox-man01-span">></span>
+				<p class="concealBox-man01-p">
+					<a>风衣</a>
+					<span>/</span>
+					<a>大衣</a>
+					
+					<a>风衣</a>
+					<span>/</span>
+					<a>大衣</a>
+					
+					<a>风衣</a>
+					<span>/</span>
+					<a>大衣</a>
+				</p>
+			</div>-->
+			
+		</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/swiper-3.4.2.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+	
+	//动态创建dom
+	let manAadGirl='<div class="concealBox-lis-box"><a class="concealBox-man01">男士外套</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let glassesACC='<div class="concealBox-lis-box"><a class="concealBox-man01">眼镜</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let shoes='<div class="concealBox-lis-box"><a class="concealBox-man01">鞋子</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let leatherware='<div class="concealBox-lis-box"><a class="concealBox-man01">皮具</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let livingAtHome='<div class="concealBox-lis-box"><a class="concealBox-man01">家纺</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let makeUp='<div class="concealBox-lis-box"><a class="concealBox-man01">化妆品</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let kitchen='<div class="concealBox-lis-box"><a class="concealBox-man01">家电</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let car='<div class="concealBox-lis-box"><a class="concealBox-man01">路虎</a><span class="concealBox-man01-span">></span><p class="concealBox-man01-p"><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a><a class="marginRinghtA">大衣</a><a>风衣</a><span>/</span><a class="marginRinghtA">大衣</a></p></div>';
+	let Arr=[manAadGirl,glassesACC,shoes,leatherware,livingAtHome,makeUp,kitchen,car]
+	
+	
+	let $lis=$(".secondaryMenu-show li");
+	for(let i=0;i<$lis.length;i++){
+		$($(".concealBox")).innerHTML="";
+		$lis.eq(i).mouseover(function(){
+			for(var k=0;k<$lis.length;k++){
+				$(".concealBox").css("display","none");
+			}
+			$(".concealBox").css("display","block");
+			for(let j=0;j<7;j++){
+				$(".concealBox").append(Arr[i])
+				
+			}
+			$($(".concealBox")).innerHTML=" ";
+		})
+//		$lis.eq(i).mouseout(function(){
+//			$(".concealBox").css("display","none");
+//			//$($(".concealBox")).innerHTML="";
+//		})
+		
+		
+	}
+	$(".concealBox").mouseover(function(){
+		$(".concealBox").css("display","block");
+	})
+	$(".concealBox").mouseout(function(){
+		$(".concealBox").css("display","none");
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+//轮播图
+var mySwiper = new Swiper ('.swiper-container', {
+    autoplay: 2000,
+    loop: true,
+    autoplayDisableOnInteraction :false,
+    //effect : 'cube',
+    effect : 'coverflow',
+    paginationClickable: true,
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+   
+  })        
+</script>

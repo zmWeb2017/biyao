@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+		
+	}
+	#box{
+		width:100px;
+		height:300px;background: #333;
+		
+	}
+	li p{
+		width:100px;
+		height:50px;
+		text-align: center;
+		line-height:50px;
+	}
+	 p:hover {
+		background:orange;
+	}
+	a{
+		cursor:pointer;
+	}
+	li ul{
+		display: none;
+		width:200px;
+		height:200px;
+		border: 1px solid ;
+	}
+	#box2{
+		width:500px;
+		height:300px;
+		background: rgb(249,249,249);
+		display: none;
+	}
+	#box2,#box{
+		float:left;
+		
+	}
+</style>
+</head>
+<body>
+	<ul id="box">
+		<li>
+			<p>
+				<a>男装</a>
+				<span>/</span>
+				<a>女装</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<a>眼镜</a>
+				<span>/</span>
+				<a>配饰</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<a>鞋靴</a>
+				<span>/</span>
+				<a>运动</a>
+			</p>
+			
+		</li>
+		<li>
+			<p>
+				<a>皮具</a>
+				<span>/</span>
+				<a>出行</a>
+			</p>
+			
+		</li>
+	</ul>
+	<div id="box2">
+		
+	</div>
+	
+	
+	<!---->
+	<a>男士外套</a>
+	<span>></span>
+	<p>
+		<a>风衣</a>
+		<span>/</span>
+		<a>大衣</a>
+		
+		<a>风衣</a>
+		<span>/</span>
+		<a>大衣</a>
+		
+		<a>风衣</a>
+		<span>/</span>
+		<a>大衣</a>
+	</p>
+	<a>男士上装</a>
+	<span>></span>
+	<p>
+		<a>衬衫</a>
+		<a>针织衫</a>
+		
+		<a>羊绒</a>
+		<span>/</span>
+		<a>毛衫</a>
+		
+		<a>风衣</a>
+		<span>/</span>
+		<a>大衣</a>
+	</p>
+	
+	
+	<!---->
+	
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+let commodityArr=['<ul><li>女士上衣</li><li>女士下衣</li><li>女士内衣</li><li>女士外套</li></ul>','<ul><li>童装童靴</li><li>儿童玩具</li><li>儿童配饰</li></ul>','<ul><li>电脑</li><li>相机</li><li>手机</li><li>笔记本</li></ul>'];
+$("#box2").innerHTML="";
+$(function(){
+	//鼠标滑过
+	for(let i=0;i<commodityArr.length;i++){
+		$("li p").eq(i).mouseover(function(){
+		$("#box2")[0].innerHTML="";
+		//滑过显示二级菜单
+		$("#box2").css({
+			display:"block",
+		});
+		//二级菜单内容
+		$("#box2").append(commodityArr[i]);
+		//鼠标停留二级菜单时，二级菜单一直显示
+		$("#box2").mouseover(function(){
+			$("#box2").css("display","block");
+		})
+	})
+	}
+	
+	//鼠标离开
+	$("li").find("p").mouseout(function(){
+		$("#box2").css("display","none");
+		$("#box2").mouseout(function(){
+			$("#box2").css("display","none");
+		})
+	})
+	//
+	
+})
+</script>

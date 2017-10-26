@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+
+	#box{
+		width: 1080px;
+		height: 360px;
+		border:1px solid ;
+		position:relative;
+	}
+	img{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	p{
+		position:absolute;
+		width: 50px;
+		height:50px;
+		z-index: 99;
+		font-size: 50px;
+		line-height: 45px;
+		text-align: center;
+		color:#fff;
+		background: rgba(0,0,0,.4);
+		border-radius:10px;
+	}
+	#right{
+		right:20px;
+		top:110px;
+	}
+	#left{
+		left:220px;
+		top:110px;
+	}
+	ul{
+		position:absolute;
+		right: 360px;
+		bottom:24px;
+		display: flex;
+		list-style: none;
+	}
+	ul li{
+		width:15px;
+		height:15px;
+		border-radius:50%;
+		border:2px solid #523669;
+		margin-left: 12px;
+		
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+			<img src="img/Slide0.jpg" />
+			<img src="img/Slide1.jpg" />
+			<img src="img/Slide2.jpg" />
+			<img src="img/Slide3.jpg" />
+			<img src="img/Slide4.jpg" />
+			<img src="img/Slide5.jpg" />
+		
+		<p id="right">></p>
+		<p id="left"><</p>
+		
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+let len = $("li").length;
+$(function(){
+	//初始化界面
+	$($("li")[0]).css({backgroundColor:"orange"})
+	$($("img")[0]).css("opacity","1").siblings("img").css("opacity","0");
+	var cont=0;
+	//设定播放器自动播放
+	var myTimer=null;
+	var j=0;
+	myTimer=setInterval(go,2000);
+	//go函数
+	function go(){
+		j++;
+		if(j>len){
+			j=0;
+		}
+	$($("img")[j]).animate({opacity:1},1000).siblings("img").animate({opacity:0},1000);
+	$($("li")[j]).css({backgroundColor:"orange"}).siblings("li").css({backgroundColor:""});
+	}
+	//给按钮绑定点击事件
+		
+		for (let i=0;i<len;i++){
+			$($("li")[i]).click(function(){
+				console.log(i);
+				cont=i;
+				$($("img")[i]).animate({opacity:1},1000).siblings("img").animate({opacity:0},1000);
+				$($("li")[i]).css({backgroundColor:"orange"}).siblings("li").css({backgroundColor:""});
+			});
+		}
+		//鼠标over和out
+		$("#box").mouseover(function(){
+ 			clearInterval(myTimer);
+		});
+		$("#box").mouseout(function(){
+			myTimer=setInterval(function(){
+			cont++;
+			if(cont>len){
+				cont=0;
+			}
+			$($("img")[cont]).animate({opacity:1},1000).siblings("img").animate({opacity:0},1000);
+			$($("li")[cont]).css({backgroundColor:"orange"}).siblings("li").css({backgroundColor:""});
+		},2000);
+		});
+})
+</script>
