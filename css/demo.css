@@ -3,15 +3,23 @@
 
 body { background: #f9f9f9; }
 
-a:hover { cursor: pointer; }
+a { cursor: pointer; }
 
 #index-nav-box { width: 100%; height: 30px; background: #333; }
+
+#index-nav-box a:hover { color: white; }
 
 #index-nav { width: 1080px; height: 30px; margin: 0 auto; }
 
 #index-nav-left a, .leftSpan { float: left; color: #ccc; font-size: 12px; margin-right: 18px; line-height: 30px; }
 
 #index-nav-right a, .rightSpan { float: right; color: #ccc; font-size: 12px; margin-left: 20px; line-height: 30px; }
+
+.nav-xiazaiAPP { width: 150px; height: 240px; background: white; box-shadow: -1px -2px 2px rgba(205, 205, 205, 0.3), 2px 0px 3px rgba(205, 205, 205, 0.3); position: absolute; right: 316px; top: 40px; z-index: 1001; border-top-color: #cdcdcd; border-radius: 3px; display: none; }
+.nav-xiazaiAPP .nav-border { position: absolute; right: 46px; top: -15px; }
+.nav-xiazaiAPP .nav-biyao { margin: 14px 55px; width: 40px; height: 40px; }
+.nav-xiazaiAPP .nav-p { font-size: 12px; color: #523669; margin-left: 25px; }
+.nav-xiazaiAPP .nav-erweima { width: 124px; height: 124px; margin: 14px 13px 15px; }
 
 #index-nav-right .num { margin-left: 10px; }
 
@@ -22,13 +30,17 @@ a:hover { cursor: pointer; }
 #gouwuche i { font-size: 18px; margin-left: 15px; margin-right: 10px; }
 
 /*导航栏*/
-.index-Search-box { width: 100%; height: 98px; background: white; }
+.index-Search-box { width: 100%; height: 98px; background: white; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
 
 .index-Search { width: 1080px; height: 98px; margin: 0 auto; line-height: 98px; background: white; }
 
-.index-Search p { float: right; margin-top: 30px; height: 40px; width: 310px; padding-left: 10px; border: 1px solid #ccc; line-height: 40px; border-bottom-left-radius: 5px; border-top-left-radius: 5px; }
+.Searchinput { float: right; margin-top: 30px; height: 40px; width: 310px; padding-left: 10px; border: 1px solid #ccc; line-height: 40px; border-bottom-left-radius: 5px; border-top-left-radius: 5px; }
 
-.index-Search input { height: 40px; width: 300px; display: block; border: none; }
+#searchInput { height: 40px; width: 300px; display: block; border: none; font-size: 16px; outline: none; }
+
+.fouch-box { width: 321px; height: 340px; background: white; position: absolute; left: 810px; top: 102px; z-index: 1002; display: none; padding-bottom: 10px; padding-top: 10px; }
+.fouch-box li { width: 301px; font-size: 12px; height: 34px; margin-top: 0px; padding-left: 20px; line-height: 34px; }
+.fouch-box li:hover { background: #f0f0f0; }
 
 .index-Search img { margin-top: 22px; }
 
@@ -37,6 +49,24 @@ a:hover { cursor: pointer; }
 .SearchBtn i { font-size: 28px; color: #ccc; position: relative; left: 5px; top: -28px; }
 
 .SearchBtn i:hover { cursor: pointer; }
+
+.dingbuxuanfu-box { width: 100%; height: 60px; background: #fff; position: fixed; top: 0; left: 0; box-shadow: 0px 1px 1px 1px rgba(205, 205, 205, 0.5); display: none; z-index: 10000; }
+.dingbuxuanfu-box .dingbuxuanfu-box-box { width: 1080px; height: 60px; margin: 0 auto; }
+.dingbuxuanfu-box .dingbuxuanfu-box-box a { width: 85px; height: 50px; font-size: 16px; float: left; display: block; margin-top: 14px; line-height: 30px; color: #808080; }
+.dingbuxuanfu-box .dingbuxuanfu-box-box a img { margin-left: 5px; }
+.dingbuxuanfu-box .dingbuxuanfu-box-box a:hover img { transform: rotatex(180deg); }
+
+.cebianlan-box { width: 48px; height: 96px; position: fixed; right: 33px; bottom: 130px; }
+.cebianlan-box .cebianlan-hover { float: left; }
+.cebianlan-box .cebianlan-huidaodingbu { display: none; float: left; }
+
+.cebianlan-hovershow { width: 274px; height: 154px; background: #fff; box-shadow: -1px -2px 2px rgba(205, 205, 205, 0.3), 2px 0px 3px rgba(205, 205, 205, 0.3); position: fixed; right: 90px; bottom: 100px; z-index: 1001; border-top-color: #cdcdcd; border-radius: 3px; padding: 13px; display: none; }
+.cebianlan-hovershow .cebianlan-right { float: left; }
+.cebianlan-hovershow .cebianlan-right img { width: 129px; height: 129px; }
+.cebianlan-hovershow .cebianlan-right p { font-size: 14px; color: #523669; margin-top: 3px; text-align: center; width: 129px; }
+.cebianlan-hovershow .cebianlan-left { float: left; }
+.cebianlan-hovershow .cebianlan-left img { width: 129px; height: 129px; }
+.cebianlan-hovershow .cebianlan-left p { font-size: 14px; color: #523669; margin-top: 3px; text-align: center; width: 129px; }
 
 /*轮播图和二级菜单*/
 .index-result-box { width: 1080px; height: 360px; margin: 0 auto; margin-top: 10px; }
@@ -62,7 +92,7 @@ a:hover { cursor: pointer; }
 .swiper-button-prev { left: 220px; top: 170px; }
 
 /*二级菜单*/
-.secondaryMenu { width: 200px; height: 360px; background: #57555c; position: relative; top: -360px; z-index: 999; opacity: .8; }
+.secondaryMenu { width: 200px; height: 360px; background: #57555c; position: relative; top: -360px; z-index: 999; opacity: 1; }
 
 .secondaryMenu-show { color: white; font-size: 14px; padding-top: 20px; }
 
@@ -76,9 +106,9 @@ a:hover { cursor: pointer; }
 
 /*erjicaidan*/
 /*隐藏的div*/
-.concealBox { width: 700px; min-height: 360px; position: absolute; left: 200px; top: 0px; background: white; z-index: 999; display: none; font-size: 14px; padding-bottom: 15px; padding-top: 15px; opacity: 1; }
+.concealBox { width: 700px; min-height: 330px; position: absolute; left: 200px; top: 0px; background: white; z-index: 999; display: none; font-size: 14px; padding-bottom: 15px; padding-top: 15px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
 
-.concealBox-hover { z-index: 1000; }
+.concealBox-hover { display: block; z-index: 1000; }
 
 .concealBox-lis-box { display: flex; height: 50px; line-height: 50px; }
 
@@ -92,6 +122,48 @@ a:hover { cursor: pointer; }
 
 .concealBox-man01-p { margin-right: 0px; width: 590px; height: 50px; border-bottom: 1px solid #f2f2f2; }
 
-#biyaoshuo-box { width: 1080px; margin: 0 auto; background: white; height: 55px; position: relative; top: -360px; left: 0; }
+.biyaoshuo-box { padding-top: 14px; display: flex; width: 1080px; margin: 0 auto; background: white; height: 35px; position: relative; top: -360px; left: 0; }
+
+.biyaoshuo-box img { width: 95px; height: 25px; margin-left: 55px; }
+
+.biyaoshuo-box #shuxian { margin-left: 55px; margin-right: 20px; }
+
+.biyaoshuo-box .laobi { margin-left: 508px; }
+
+.laobi span { margin-right: 20px; }
+
+/*图片区域*/
+.tupianquyu-one { width: 1080px; margin: 0 auto; margin-top: 95px; display: flex; justify-content: space-between; }
+.tupianquyu-one .tupianquyu-one-a { display: inline-block; width: 350px; height: 220px; transition: box-shadow 0.5s ease-in-out; }
+.tupianquyu-one .tupianquyu-one-a:hover { box-shadow: 3px -3px 15px 3px rgba(205, 205, 205, 0.2), -3px 3px 15px 3px rgba(205, 205, 205, 0.2); }
+
+.shoufengqin { width: 1080px; height: 284px; margin: 0 auto; }
+
+#shoufengqinbox { position: relative; top: 0px; left: 0px; width: 1080px; height: 280px; display: flex; overflow: hidden; background: #fff; }
+
+#shoufengqinbox li { list-style: none; position: absolute; background: #fff; padding-left: 10px; transition: animation 0.5s ease-in-out 0s; }
+
+#shoufengqinbox a { position: relative; display: block; cursor: pointer; }
+
+/*给每个i先加上个遮罩层*/
+#shoufengqinbox i { position: absolute; width: 100%; height: 100%; transition: background 0.5s ease-in-out 0s; background: rgba(0, 0, 0, 0.3); }
+
+/*起个class清除遮罩层*/
+#shoufengqinbox .shoufengqinboxshow { background: transparent; transition: background 0.5s ease-in-out 0s; /*ease-in-out:表示动画执行先慢后快*/ }
+
+.jingxuan { width: 1080px; margin: 0 auto; font-size: 22px; margin-bottom: 17px; margin-top: 39px; }
+
+.guangxueyanjing { float: right; font-size: 16px; }
+
+.yanjing-box { height: 285px; width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; }
+.yanjing-box .yanjing-box-one { width: 423px; height: 284px; }
+.yanjing-box .yanjing-box-one img { width: 423px; height: 204px; display: block; }
+.yanjing-box .yanjing-box-one p { width: 423px; height: 20px; font-size: 20px; padding: 30px 0; text-align: center; background: white; }
+.yanjing-box .yanjing-box-two { width: 204px; height: 284px; }
+.yanjing-box .yanjing-box-two img { width: 204px; height: 204px; display: block; }
+.yanjing-box .yanjing-box-two p { width: 204px; height: 52px; font-size: 16px; padding-top: 28px; text-align: center; background: white; }
+.yanjing-box .yanjing-box-two span { color: red; margin-top: 15px; }
+
+/*# sourceMappingURL=demo.css.map */
 
 /*# sourceMappingURL=demo.css.map */

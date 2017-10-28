@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	
+	*{
+		margin:0;
+		padding:0;
+	}
+	#shoufengqinbox{
+		position:relative;
+		top:150px;
+		left:100px;
+		width:1080px;
+		height: 280px;
+		display: flex;
+		overflow: hidden;
+		background:#fff;
+	}
+	#shoufengqinbox li{
+		list-style: none;
+		position:absolute;
+		background:#fff;
+		padding-left:10px;
+	}
+	#shoufengqinbox a{
+		position:relative;
+		display: block;
+	    cursor: pointer;
+	}
+	/*给每个i先加上个遮罩层*/
+	#shoufengqinbox i{
+		position: absolute;
+		width:100%;
+		height:100%;
+		transition: background 0.5s ease-in-out 0s;
+	    background: rgba(0,0,0,.3);
+	}
+	/*起个class清除遮罩层*/
+	#shoufengqinbox .show{
+		background: rgba(0,0,0,0);
+		transition: background 0.5s ease-in-out 0s;/*ease-in-out:表示动画执行先慢后快*/
+	}
+</style>
+</head>
+<body>
+	<ul id="shoufengqinbox">
+		
+		<li style="left:0px;padding-left:0px;"><a href="#"><i class="show"></i><img src="img/accordion01.jpg"/></a></li>
+	
+		<li style="left:620px"><a href="#"><i></i><img src="img/accordion02.jpg"/></a></li>
+		<li style="left:710px"><a href="#"><i></i><img src="img/accordion03.jpg"/></a></li>
+		<li style="left:800px"><a href="#"><i></i><img src="img/accordion04.jpg"/></a></li>
+		<li style="left:890px"><a href="#"><i></i><img src="img/accordion05.jpg"/></a></li>
+		<li style="left:980px"><a href="#"><i></i><img src="img/accordion06.jpg"/></a></li>
+		
+	</ul>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+(function shoufengqin(){
+	//左移
+	function moveLeft(ord){
+		let $lis=$("ul").children();
+		for(let i=0;i<=ord;i++){
+			$lis.eq(i).animate({"left":i*90},500);
+		}
+	}
+	//右移
+	function moveRight(ord){
+		let $lis=$("ul").children();
+		for(let i=ord+1;i<$lis.length;i++){
+			$lis.eq(i).animate({"left":(i-1)*90+620},500);
+		}
+	}
+	$(function(){
+		$("li").mouseover(function(){
+			//let $is=$("ul").children();
+			let index=$("li").index(this);
+			//让每个都有遮罩层
+			$("li i:nth-child(1)").removeClass("show");
+			//鼠标滑过谁，给谁添加个清除遮罩层的class
+			$("i").eq(index).addClass("show");
+			
+			let position=$(this).position();
+			console.log(index)
+			if(position.left==index*90){
+				moveRight(index); 
+			}else{
+				moveLeft(index);
+			}
+		})   
+	
+		
+	})
+})()
+
+</script>

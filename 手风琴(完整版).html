@@ -63,6 +63,42 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript">
+
+
+//(function shoufengqin(){
+//	//左移
+//	
+//	function moveLeft(ord){
+//		let $lis=$($("#shoufengqinbox")).children();
+//		for(let i=0;i<=ord;i++){
+//			$lis.eq(i).animate({"left":i*90},500);
+//		}
+//	}
+//	//右移
+//	function moveRight(ord){
+//		let $lis=$($("#shoufengqinbox")).children();
+//		for(let i=ord+1;i<=$lis.length;i++){
+//			$lis.eq(i).animate({"left":(i-1)*90+620},500);
+//		}
+//	}
+//	$(function(){
+//		let $lis=$($("#shoufengqinbox")).children();
+//		for(let i=0;i<$lis.length;i++){
+//			$lis.eq(i).mouseover(function(){
+//				//让每个都有遮罩层
+//				$(".shoufengqinlis i:nth-child(1)").removeClass("shoufengqinboxshow");
+//				//鼠标滑过谁，给谁添加个清除遮罩层的class
+//				$(".shoufengqinlis i").eq(i).addClass("shoufengqinboxshow");
+//				
+//				let position=$(this).position();
+//				console.log(i)
+//				if(position.left==i*90){
+//					moveRight(i); 
+//				}else{
+//					moveLeft(i);
+//				}
+//			})   
+//		}
 //左移
 function moveLeft(ord){
 	let $lis=$("ul").children();
@@ -79,7 +115,6 @@ function moveRight(ord){
 }
 $(function(){
 	$("li").mouseover(function(){
-		let $is=$("ul").children();
 		let index=$("li").index(this);
 		//让每个都有遮罩层
 		$("li i:nth-child(1)").removeClass("show");
